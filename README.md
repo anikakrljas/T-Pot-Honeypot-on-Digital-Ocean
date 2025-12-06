@@ -56,55 +56,56 @@ SSH key for secure login
 Click Create Droplet and wait for the server to be provisioned.
 You will receive the IP address to access your T-Pot honeypot. 🚀
 
+
 # 🚨 Deploying T-Pot Honeypot via PowerShell (SSH)
 
 This section documents the exact steps I used to deploy T-Pot, a multi-honeypot platform, on my server using PowerShell and SSH. Each command is explained in detail to help others fully understand the setup process.
 
 ## 1. 🔐 Connect to Your Server
 ssh root@publicIPaddress
-Explanation:
+
 This command initiates a secure SSH connection from your local machine to the remote server using the root account. Replace publicIPaddress with your server’s actual public IP. From PowerShell, this opens an encrypted session where you can run administrative commands.
 
 ## 2. 📦 Update and Upgrade System Packages
 apt-get update && apt-get upgrade -y
-Explanation:
+
 apt-get update refreshes the package index, ensuring your system knows about the latest available versions of all packages.
 apt-get upgrade -y automatically installs all available updates.
 This step ensures your server is fully patched before installing T-Pot.
 
 ## 3. 👤 Create a New User
 adduser username
-Explanation:
+
 Creates a new user account on the system. Replace username with the name you want to assign. You’ll be prompted to set a password and optional user details.
 
 ## 4. 🔑 Grant Sudo Privileges
 sudo usermod -aG sudo username
-Explanation:
+
 Adds the new user to the sudo group, giving them administrative privileges. This is a best practice so that you don’t continue using the root account for routine tasks.
 
 ## 5. 🔄 Switch to the New User
 su username
-Explanation:
+
 Switches from the root user to the newly created user account. This ensures the installation and repository setup happen under a safer, non-root environment.
 
 ## 6. 📁 Navigate to the User’s Home Directory
 cd /home/username
-Explanation:
+
 Moves into the home directory of the new user, where your cloned repository and installation files will be stored.
 
 ## 7. 📥 Clone Your Repository
 git clone repos
-Explanation:
+
 Clones the repository containing the T-Pot CE files or your fork of the project. Replace repos with the actual Git URL.
 
 ## 8. 📂 Enter the T-Pot Directory
 cd tpotce/
-Explanation:
+
 Navigates into the cloned repository folder where the T-Pot installation script is located.
 
 ## 9. ⚙️ Run the T-Pot Installation Script
 ./install.sh
-Explanation:
+
 Executes the official T-Pot installation script. The script will guide you through configuration options and set up multiple honeypot services, dashboards, and data pipelines.
 Make sure the script is executable (chmod +x install.sh) if needed.
 
@@ -149,18 +150,18 @@ This mode is minimalistic but very effective for bot deterrence.
 
 # 🔄 Reboot After Installation
 sudo reboot
-Explanation:
+
 Reboots the server so the new SSH configuration, services, and T-Pot components fully activate.
 
 # 🔑 Connecting Using the New SSH Port
 ssh -p sshportnumber root@publicIPaddress
-Explanation:
+
 -p sshportnumber specifies the new SSH port assigned by T-Pot (e.g., 64297).
 You must now use this port every time you connect via SSH.
 
 # 🌐 Accessing the T-Pot Web Interface
 https://publicIPaddress:sshportnumber
-Explanation:
+
 T-Pot’s web UI (Cockpit + dashboards) also listens on the same high port that SSH was moved to (for example, https://yourIP:64297).
 This port is chosen dynamically by the installer to avoid conflicts with the honeypots, many of which use standard ports (22, 80, 443, etc.) to mimic real services.
 
@@ -172,6 +173,12 @@ The high port—e.g., 64297—acts as a secure management port for both:
 
 # 🔁 Restarting T-Pot Services
 systemctl restart tpot
-Explanation:
+
 Restarts all T-Pot honeypot services, dashboards, and supporting components without rebooting the whole machine.
 Useful after configuration updates or troubleshooting.
+
+### T-Pot 
+
+![Snimak ekrana 2025-12-06 123918](https://github.com/user-attachments/assets/31f8f62c-7835-4339-9c66-44bcef035a0b)
+
+
