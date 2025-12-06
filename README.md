@@ -22,6 +22,7 @@ Ubuntu is a user-friendly Linux operating system widely used for servers.
   <li><strong>LTS</strong> → Long Term Support (5 years of updates)</li>
   <li><strong>x64</strong> → 64-bit architecture, supports modern applications and more memory</li>
 </ul>
+
 ![Snimak ekrana 2025-12-06 105721](https://github.com/user-attachments/assets/f2fd83f3-d96f-4e99-a403-a145bf6ffefb)
 
 # 3. Choose a Region
