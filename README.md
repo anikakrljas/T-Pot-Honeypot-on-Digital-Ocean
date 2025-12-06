@@ -12,7 +12,6 @@ I decided to deploy T-Pot on Digital Ocean, a cloud computing platform that prov
 
 Log into your Digital Ocean account.
 Click Create → Droplet.
-![Snimak ekrana 2025-12-06 135714](https://github.com/user-attachments/assets/ef216b89-1672-4066-afd2-25a17c2fdb1b)
 
 # 2. Choose an Image
 
