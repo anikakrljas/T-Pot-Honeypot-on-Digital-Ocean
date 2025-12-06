@@ -1,4 +1,4 @@
-#🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
+🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
 Introduction
 
 Welcome to my T-Pot Honeypot project! 👋
@@ -7,7 +7,7 @@ T-Pot is an all-in-one honeypot platform that combines multiple honeypot technol
 
 I decided to deploy T-Pot on Digital Ocean, a cloud computing platform that provides simple and scalable virtual machines (Droplets) to host applications. Digital Ocean makes it easy to set up a server quickly without worrying about hardware management. ⚡
 
-#🛠 Creating a Droplet
+🛠 Creating a Droplet
 1. Go to Create Droplet
 
 Log into your Digital Ocean account.
