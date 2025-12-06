@@ -12,4 +12,5 @@ I decided to deploy T-Pot on Digital Ocean, a cloud computing platform that prov
 
 Start by logging into your Digital Ocean account and click on Create → Droplet.
 This will open the page where you can configure your virtual machine.
+
 ![Snimak ekrana 2025-12-06 105623](https://github.com/user-attachments/assets/ab0253f6-cf1f-43f9-a8cd-446ad523bd7f)
