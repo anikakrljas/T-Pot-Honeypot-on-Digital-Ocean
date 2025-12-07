@@ -419,3 +419,115 @@ Brute-force attempts rely heavily on well-known weak passwords.
 
 Ports 8728, 5060, and ConPot hits show attackers probing routers, SIP servers, and ICS devices.
 
+# 🔹 CyberChef: The Cyber Swiss Army Knife 🔹
+
+Overview:
+CyberChef, often called the “Cyber Swiss Army Knife” 🛠️, is a web-based tool developed by GCHQ for performing a wide variety of data analysis, manipulation, and encryption tasks. It’s designed for both beginners and professionals in cybersecurity, digital forensics, and data analysis. The tool allows users to process data through an intuitive drag-and-drop interface, using “recipes” 🍳 that chain together different operations.
+
+![Snimak ekrana 2025-12-07 134453](https://github.com/user-attachments/assets/74c5bf01-f6c4-427c-b4c3-1a555fdc9180)
+
+Key Features:
+<ul>
+  <li>🔐 <strong>Data Encoding & Decoding:</strong> Convert between Base64, Hex, URL encoding, and more.</li>
+  <li>🛡️ <strong>Encryption & Decryption:</strong> Support for AES, XOR, ROT13, and other cryptographic algorithms.</li>
+  <li>📊 <strong>Hashing & Checksums:</strong> Calculate MD5, SHA-1, SHA-256, and other hashes.</li>
+  <li>🔍 <strong>Data Extraction:</strong> Extract useful information from logs, emails, or network packets.</li>
+  <li>⚡ <strong>Analysis & Transformation:</strong> Perform pattern matching, regex searches, or byte-level operations.</li>
+</ul>
+
+Why It’s Useful in Cybersecurity:
+<ol>
+  <li>🚨 <strong>Incident Response:</strong> Quickly decode and analyze suspicious files, emails, or network traffic.</li>
+  <li>🦠 <strong>Malware Analysis:</strong> Inspect payloads, decrypt strings, or reverse engineer obfuscated code.</li>
+  <li>🕵️‍♂️ <strong>Forensics:</strong> Extract hidden information from files or logs to understand an attack or breach.</li>
+  <li>⚙️ <strong>Rapid Prototyping:</strong> Create custom “recipes” to automate repetitive analysis tasks.</li>
+  <li>📚 <strong>Education & Training:</strong> Visual interface helps beginners learn cryptography and encoding concepts easily.</li>
+</ol>
+
+Why It Stands Out:
+<ul>
+  <li>✨ <strong>Intuitive Interface:</strong> No need to write scripts; drag and drop operations in a logical sequence.</li>
+  <li>🧰 <strong>All-in-One:</strong> Combines multiple cybersecurity tasks in a single tool.</li>
+  <li>🌐 <strong>Open Source:</strong> Freely available and continuously improved by the community.</li>
+</ul>
+
+Conclusion:
+CyberChef is a versatile tool for anyone working in cybersecurity 💻. Its ability to quickly manipulate, decode, and analyze data makes it an essential part of threat hunting, digital forensics, and malware analysis. With CyberChef, complex tasks become simple, making it a “must-have” tool for security professionals and enthusiasts alike 🚀.
+
+# 🕷️ SpiderFoot: The Automated OSINT Tool 🕷️
+
+Overview:
+
+SpiderFoot is an open-source intelligence (OSINT) automation tool that helps security professionals gather information about IPs, domains, email addresses, names, and more 🌐. It automates the collection and correlation of data from hundreds of sources, making reconnaissance faster, easier, and more accurate. SpiderFoot is designed for both beginners and experts in cybersecurity, threat intelligence, and digital forensics.</p>
+
+Key Features:
+
+<ul>
+  <li>🔎 <strong>Automated Reconnaissance:</strong> Scan targets to gather intelligence from open sources automatically.</li>
+  <li>🌐 <strong>Wide Source Integration:</strong> Pull data from public databases, DNS records, social media, breach data, and more.</li>
+  <li>📊 <strong>Data Correlation:</strong> Link related data points to discover hidden relationships.</li>
+  <li>⚡ <strong>Flexible Scanning:</strong> Scan IPs, domains, emails, names, or ASNs with minimal manual setup.</li>
+  <li>🛡️ <strong>Threat Intelligence:</strong> Identify potential vulnerabilities, leaks, or suspicious activity early.</li>
+</ul>
+
+Why It’s Useful in Cybersecurity:
+
+<ol>
+  <li>🕵️‍♂️ <strong>Recon & Footprinting:</strong> Map out an organization’s digital footprint efficiently.</li>
+  <li>🚨 <strong>Threat Hunting:</strong> Detect potential attack surfaces or compromised assets.</li>
+  <li>🦠 <strong>Security Assessment:</strong> Identify exposed data or weak points before attackers do.</li>
+  <li>📚 <strong>Research & Education:</strong> Learn OSINT techniques and gather real-world data safely.</li>
+  <li>⚙️ <strong>Automation:</strong> Save time with automated scanning and reporting, reducing human error.</li>
+</ol>
+
+Why It Stands Out:
+
+<ul>
+  <li>✨ <strong>Highly Automated:</strong> Minimal manual input required to gather massive amounts of intelligence.</li>
+  <li>🧰 <strong>All-in-One OSINT Tool:</strong> Combines hundreds of sources into a single platform.</li>
+  <li>🌐 <strong>Open Source:</strong> Continuously improved by the community and fully customizable.</li>
+</ul>
+
+Conclusion:
+
+SpiderFoot is an essential tool for cybersecurity professionals 💻, OSINT investigators, and threat intelligence analysts. Its ability to automatically collect and correlate vast amounts of data helps identify vulnerabilities, track threat actors, and strengthen digital defenses 🛡️. Whether you’re a beginner or an expert, SpiderFoot simplifies reconnaissance and makes intelligence gathering efficient and effective 🚀.
+
+# 📊 Elasticvue: Elasticsearch Management Made Easy 📊
+
+Overview:
+
+Elasticvue is a powerful web-based tool for managing and visualizing Elasticsearch clusters 🔍. It provides a clean and intuitive interface for querying, monitoring, and administering Elasticsearch data. Elasticvue is designed for developers, system administrators, and security professionals who work with Elasticsearch on a daily basis.</p>
+
+Key Features:
+
+<ul>
+  <li>🗃️ <strong>Cluster Overview:</strong> Get real-time statistics about your Elasticsearch nodes, indices, and cluster health.</li>
+  <li>🔎 <strong>Data Exploration:</strong> Browse indices, documents, and mappings with an easy-to-use interface.</li>
+  <li>⚡ <strong>Querying & Filtering:</strong> Run Elasticsearch queries, filters, and aggregations quickly and visually.</li>
+  <li>🛠️ <strong>Index Management:</strong> Create, delete, or update indices and mappings directly from the interface.</li>
+  <li>📊 <strong>Visualization:</strong> Visualize document counts, field distributions, and cluster metrics.</li>
+</ul>
+
+Why It’s Useful in Cybersecurity:
+
+<ol>
+  <li>🕵️‍♂️ <strong>Log Analysis:</strong> Quickly analyze logs and events for suspicious activity or incidents.</li>
+  <li>🚨 <strong>Monitoring:</strong> Keep track of Elasticsearch cluster health and performance to avoid failures.</li>
+  <li>🦠 <strong>Threat Hunting:</strong> Query and correlate security logs to identify potential attacks.</li>
+  <li>⚙️ <strong>Automation & Admin:</strong> Manage indices, mappings, and settings without using command-line tools.</li>
+  <li>📚 <strong>Learning & Debugging:</strong> Explore Elasticsearch queries and understand data structures easily.</li>
+</ol>
+
+Why It Stands Out:
+
+<ul>
+  <li>✨ <strong>Intuitive Interface:</strong> Visual and interactive UI makes Elasticsearch management easy.</li>
+  <li>🧰 <strong>All-in-One Tool:</strong> Combines querying, monitoring, and cluster management in a single platform.</li>
+  <li>🌐 <strong>Open Source:</strong> Freely available, actively maintained, and community-driven.</li>
+</ul>
+
+Conclusion: 
+
+Elasticvue is an essential tool for anyone working with Elasticsearch 💻. Its clean interface, powerful querying capabilities, and monitoring tools make it ideal for developers, sysadmins, and security analysts alike 🛡️. Whether analyzing logs, managing clusters, or hunting for threats, Elasticvue simplifies the process and enhances productivity 🚀.
+
+
