@@ -177,8 +177,245 @@ systemctl restart tpot
 Restarts all T-Pot honeypot services, dashboards, and supporting components without rebooting the whole machine.
 Useful after configuration updates or troubleshooting.
 
-### T-Pot 
+# T-Pot 
 
 ![Snimak ekrana 2025-12-06 123918](https://github.com/user-attachments/assets/31f8f62c-7835-4339-9c66-44bcef035a0b)
 
+## 📊 T-Pot Honeypot – 24-Hour Attack Report
+
+![Snimak ekrana 2025-12-07 130011](https://github.com/user-attachments/assets/6807c393-3275-4667-8091-737cd811c7db)
+
+Time window: Last 24 hours
+Total recorded events: ≈ 51,463 attacks
+Your honeypot sensors captured a large amount of malicious traffic from multiple countries across the globe. Below is a breakdown of the observed activity by country, protocol, service, and general attack behavior.
+
+# 🌍 1. Geographic Distribution of Attacks
+
+Based on the “Top Countries by Hits” section in your dashboard:
+
+Top 5 Attacking Countries
+
+<ul>
+  <li>
+    🇺🇸 <strong>United States – 6079 hits</strong><br>
+    Very active across multiple services, especially SSH and SMB.
+  </li>
+  <li>
+    🇮🇱 <strong>Israel – 3037 hits</strong><br>
+    Strong activity, likely automated scanning frameworks.
+  </li>
+  <li>
+    🇳🇱 <strong>The Netherlands – 1932 hits</strong><br>
+    Common hotspot for cloud-origin traffic.
+  </li>
+  <li>
+    🇭🇰 <strong>Hong Kong – 1927 hits</strong><br>
+    Significant scanning activity, possibly botnets.
+  </li>
+  <li>
+    🇭🇺 <strong>Hungary – 1477 hits</strong><br>
+    Local/regional scanning noted.
+  </li>
+</ul>
+
+# 🔌 2. Services / Protocols Targeted
+
+The color legend in the interface shows:
+
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Color</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Service</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🔴 Red</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">FTP</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Likely brute force attempts</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟠 Orange</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">SSH</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">One of the most attacked services—login brute force, key probing</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟡 Yellow</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">TELNET</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Very common with IoT malware</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟢 Green</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">EMAIL</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">SMTP spam attempts or probing</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">⚪ White</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">SQL</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Database enumeration/injection attempts</td>
+    </tr>
+  </tbody>
+</table>
+
+# 🔍 3. Top Attacking IPs
+
+Your dashboard lists the IPs with the highest number of hits:
+
+<ul>
+  <li>🇮🇱 <strong>141.226.93.223</strong> – 3036 hits</li>
+  <li>🇭🇰 <strong>185.243.5.185</strong> – 1724 hits</li>
+  <li>🇭🇺 <strong>31.46.245.29</strong> – 1476 hits</li>
+  <li>🇺🇸 <strong>198.143.191.202</strong> – 1029 hits</li>
+  <li>🇺🇸 <strong>148.72.169.42</strong> – 763 hits</li>
+</ul>
+
+Most of these are likely automated bots or compromised servers performing broad-spectrum scanning.
+
+## 📘 T-Pot Honeypot – Kibana 24h Attack Report
+
+This report summarizes all attacks recorded by the T-Pot honeypot environment during the last 24 hours, visualized through Kibana dashboards.
+The goal is to provide a clear, readable, and insightful overview of attacker behavior, targeted services, ports, and credential attempts across all honeypot sensors.
+
+![Snimak ekrana 2025-12-07 132216](https://github.com/user-attachments/assets/7945021d-edd1-44f0-b183-5a946fbc228e)
+
+
+# 📊 1. Total Attacks Overview
+
+During the last 24 hours, the honeypot recorded a total of:
+
+🔥 55,000+ attacks
+
+These attacks were distributed across multiple honeypot modules:
+
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Honeypot</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Hits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟥 Cowrie</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">~22k</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟧 Honeytrap</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">~17k</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟨 Dionaea</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">~10k</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟩 Sentrypeer</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">~4k</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">💚 Honeyaml</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">355</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟩 Adbhoney</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">228</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟦 ConPot</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">191</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🔵 Miniprint</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">147</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">🟥 Redishoneypot</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">134</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">💌 Mailoney</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">129</td>
+    </tr>
+  </tbody>
+</table>
+
+Cowrie, Honeytrap, and Dionaea remain the highest-interaction sensors and receive the most brute-force and malware-driven traffic.
+
+# 📈 2. Attack Trends Over Time
+
+The Kibana histogram shows:
+
+<ul>
+  <li>Continuous scanning activity across the entire 24h window</li>
+  <li>Multiple sharp spikes reaching over 4,000 attacks per hour</li>
+  <li>A stable background noise of low-frequency automated probes</li>
+  <li>Unique source IPs remain lower than total attacks, proving most attacks are automated botnets 🤖</li>
+</ul>
+
+# 🛠️ 3. Attacks by Destination Port
+
+Attackers heavily targeted services running on:
+
+<ul>
+  <li>445 – SMB file sharing (Windows exploitation attempts)</li>
+  <li>5060 – SIP/VoIP scanning</li>
+  <li>22 – SSH brute-force</li>
+  <li>8728 – MikroTik routers</li>
+  <li>3000 – Generic application ports / probing</li>
+</ul>
+
+![Snimak ekrana 2025-12-07 132240](https://github.com/user-attachments/assets/5f9e5c79-1225-4310-a890-3d38cac68951)
+
+# 🔐 4. Credential Attacks (Tagcloud Analysis)
+👤 Username Tagcloud Highlights
+
+Most attempted usernames:
+
+<ul>
+  <li>root</li>
+  <li>admin</li>
+  <li>ubuntu</li>
+  <li>test / test1 / test2</li>
+  <li>postgres</li>
+  <li>nginx, backup, docker, oracle</li>
+  <li>guest, user, developer</li>
+</ul>
+
+Attackers overwhelmingly target default system accounts and common admin names.
+
+# 🔑 Password Tagcloud Highlights
+
+Most attempted passwords:
+
+<ul>
+  <li>123456 (extremely dominant)</li>
+  <li>password, password1</li>
+  <li>admin, admin123</li>
+  <li>12345, 1234, 654321</li>
+  <li>qwerty, qwerty123</li>
+  <li>root, root123</li>
+  <li>letmein, welcome</li>
+  <li>Empty passwords (“”)</li>
+  <li>Variations like P@ssw0rd, 123qwe, 123abc</li>
+</ul>
+
+🔎 This clearly indicates automated brute-force tools using giant default password dictionaries.
+
+# ⚙️ 7. Security Observations
+✔ High rate of automated botnet traffic
+
+SSH (Cowrie), SMB, and SIP ports show continuous brute-force waves.
+
+✔ Global distribution of attacks
+
+Large clusters from US + Europe with frequent single IP hits from Asia suggest mixed scanning sources.
+
+✔ Default credentials remain the #1 target
+
+Brute-force attempts rely heavily on well-known weak passwords.
+
+✔ Industrial/IoT scanning detected
+
+Ports 8728, 5060, and ConPot hits show attackers probing routers, SIP servers, and ICS devices.
 
