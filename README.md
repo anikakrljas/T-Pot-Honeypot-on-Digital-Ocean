@@ -1,4 +1,4 @@
-### 🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
+# 🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
 Introduction
 
 Welcome to my T-Pot Honeypot project! 👋
@@ -56,6 +56,10 @@ SSH key for secure login
 Click Create Droplet and wait for the server to be provisioned.
 You will receive the IP address to access your T-Pot honeypot. 🚀
 
+In the Graphs section of the droplet created on DigitalOcean Cloud, you can monitor bandwidth, CPU usage, and disk I/O.
+
+![Snimak ekrana 2025-12-07 163110](https://github.com/user-attachments/assets/dadd742d-aa71-41ac-898e-e5503c2cf425)
+
 
 # 🚨 Deploying T-Pot Honeypot via PowerShell (SSH)
 
@@ -109,13 +113,13 @@ Navigates into the cloned repository folder where the T-Pot installation script 
 Executes the official T-Pot installation script. The script will guide you through configuration options and set up multiple honeypot services, dashboards, and data pipelines.
 Make sure the script is executable (chmod +x install.sh) if needed.
 
-# 🔄 Changing the SSH Port During T-Pot Installation
+<strong>🔄 Changing the SSH Port During T-Pot Installation</strong>
 During the T-Pot installation process, the setup wizard automatically changes the default SSH port from 22 to a randomly assigned high port number.
 This is done for security reasons, because T-Pot exposes multiple honeypots on common ports, and keeping SSH on 22 would make the real system vulnerable or interfere with honeypot services.
 
 ![Snimak ekrana 2025-12-06 112610](https://github.com/user-attachments/assets/111bd295-fa72-46ad-a01b-2229d116a186)
 
-🧰 T-Pot Deployment Profiles Explained
+## 🧰 T-Pot Deployment Profiles 
 
 Below are the available installation modes you can choose from during the setup screen:
 
@@ -148,18 +152,18 @@ Includes honeypots and services tailored for lower power consumption.
 A specialized mode that focuses on tarpitting attackers—deliberately slowing down connections, consuming attacker resources, and wasting their time.
 This mode is minimalistic but very effective for bot deterrence.
 
-# 🔄 Reboot After Installation
+## 10.🔄 Reboot After Installation
 sudo reboot
 
 Reboots the server so the new SSH configuration, services, and T-Pot components fully activate.
 
-# 🔑 Connecting Using the New SSH Port
+## 11.🔑 Connecting Using the New SSH Port
 ssh -p sshportnumber root@publicIPaddress
 
 -p sshportnumber specifies the new SSH port assigned by T-Pot (e.g., 64297).
 You must now use this port every time you connect via SSH.
 
-# 🌐 Accessing the T-Pot Web Interface
+## 12.🌐 Accessing the T-Pot Web Interface
 https://publicIPaddress:sshportnumber
 
 T-Pot’s web UI (Cockpit + dashboards) also listens on the same high port that SSH was moved to (for example, https://yourIP:64297).
@@ -171,13 +175,13 @@ The high port—e.g., 64297—acts as a secure management port for both:
 
 📊 Web dashboard interface
 
-# 🔁 Restarting T-Pot Services
+## 13.🔁 Restarting T-Pot Services
 systemctl restart tpot
 
 Restarts all T-Pot honeypot services, dashboards, and supporting components without rebooting the whole machine.
 Useful after configuration updates or troubleshooting.
 
-# T-Pot 
+# T-Pot Honeypot
 
 ![Snimak ekrana 2025-12-06 123918](https://github.com/user-attachments/assets/31f8f62c-7835-4339-9c66-44bcef035a0b)
 
@@ -189,7 +193,7 @@ Time window: Last 24 hours
 Total recorded events: ≈ 51,463 attacks
 Your honeypot sensors captured a large amount of malicious traffic from multiple countries across the globe. Below is a breakdown of the observed activity by country, protocol, service, and general attack behavior.
 
-# 🌍 1. Geographic Distribution of Attacks
+### 🌍 1. Geographic Distribution of Attacks
 
 Based on the “Top Countries by Hits” section in your dashboard:
 
@@ -218,7 +222,7 @@ Top 5 Attacking Countries
   </li>
 </ul>
 
-# 🔌 2. Services / Protocols Targeted
+### 🔌 2. Services / Protocols Targeted
 
 The color legend in the interface shows:
 
@@ -259,7 +263,7 @@ The color legend in the interface shows:
   </tbody>
 </table>
 
-# 🔍 3. Top Attacking IPs
+### 🔍 3. Top Attacking IPs
 
 Your dashboard lists the IPs with the highest number of hits:
 
@@ -281,11 +285,11 @@ The goal is to provide a clear, readable, and insightful overview of attacker be
 ![Snimak ekrana 2025-12-07 132216](https://github.com/user-attachments/assets/7945021d-edd1-44f0-b183-5a946fbc228e)
 
 
-# 📊 1. Total Attacks Overview
+### 📊 1. Total Attacks Overview
 
 During the last 24 hours, the honeypot recorded a total of:
 
-🔥 55,000+ attacks
+🔥 50,000+ attacks
 
 These attacks were distributed across multiple honeypot modules:
 
@@ -342,7 +346,7 @@ These attacks were distributed across multiple honeypot modules:
 
 Cowrie, Honeytrap, and Dionaea remain the highest-interaction sensors and receive the most brute-force and malware-driven traffic.
 
-# 📈 2. Attack Trends Over Time
+### 📈 2. Attack Trends Over Time
 
 The Kibana histogram shows:
 
@@ -353,7 +357,7 @@ The Kibana histogram shows:
   <li>Unique source IPs remain lower than total attacks, proving most attacks are automated botnets 🤖</li>
 </ul>
 
-# 🛠️ 3. Attacks by Destination Port
+### 🛠️ 3. Attacks by Destination Port
 
 Attackers heavily targeted services running on:
 
@@ -367,7 +371,7 @@ Attackers heavily targeted services running on:
 
 ![Snimak ekrana 2025-12-07 132240](https://github.com/user-attachments/assets/5f9e5c79-1225-4310-a890-3d38cac68951)
 
-# 🔐 4. Credential Attacks (Tagcloud Analysis)
+### 🔐 4. Credential Attacks (Tagcloud Analysis)
 👤 Username Tagcloud Highlights
 
 Most attempted usernames:
@@ -384,7 +388,7 @@ Most attempted usernames:
 
 Attackers overwhelmingly target default system accounts and common admin names.
 
-# 🔑 Password Tagcloud Highlights
+### 5.🔑 Password Tagcloud Highlights
 
 Most attempted passwords:
 
@@ -402,7 +406,7 @@ Most attempted passwords:
 
 🔎 This clearly indicates automated brute-force tools using giant default password dictionaries.
 
-# ⚙️ 7. Security Observations
+### ⚙️ 6. Security Observations
 ✔ High rate of automated botnet traffic
 
 SSH (Cowrie), SMB, and SIP ports show continuous brute-force waves.
@@ -419,7 +423,7 @@ Brute-force attempts rely heavily on well-known weak passwords.
 
 Ports 8728, 5060, and ConPot hits show attackers probing routers, SIP servers, and ICS devices.
 
-# 🔹 CyberChef: The Cyber Swiss Army Knife 🔹
+## 🔹 CyberChef: The Cyber Swiss Army Knife 🔹
 
 Overview:
 CyberChef, often called the “Cyber Swiss Army Knife” 🛠️, is a web-based tool developed by GCHQ for performing a wide variety of data analysis, manipulation, and encryption tasks. It’s designed for both beginners and professionals in cybersecurity, digital forensics, and data analysis. The tool allows users to process data through an intuitive drag-and-drop interface, using “recipes” 🍳 that chain together different operations.
@@ -454,11 +458,14 @@ Why It Stands Out:
 Conclusion:
 CyberChef is a versatile tool for anyone working in cybersecurity 💻. Its ability to quickly manipulate, decode, and analyze data makes it an essential part of threat hunting, digital forensics, and malware analysis. With CyberChef, complex tasks become simple, making it a “must-have” tool for security professionals and enthusiasts alike 🚀.
 
-# 🕷️ SpiderFoot: The Automated OSINT Tool 🕷️
+## 🕷️ SpiderFoot: The Automated OSINT Tool 🕷️
 
 Overview:
 
-SpiderFoot is an open-source intelligence (OSINT) automation tool that helps security professionals gather information about IPs, domains, email addresses, names, and more 🌐. It automates the collection and correlation of data from hundreds of sources, making reconnaissance faster, easier, and more accurate. SpiderFoot is designed for both beginners and experts in cybersecurity, threat intelligence, and digital forensics.</p>
+SpiderFoot is an open-source intelligence (OSINT) automation tool that helps security professionals gather information about IPs, domains, email addresses, names, and more 🌐. It automates the collection and correlation of data from hundreds of sources, making reconnaissance faster, easier, and more accurate. SpiderFoot is designed for both beginners and experts in cybersecurity, threat intelligence, and digital forensics.
+
+![Snimak ekrana 2025-12-07 164128](https://github.com/user-attachments/assets/1b1ff939-87fc-4d44-a2c4-f20384c49716)
+
 
 Key Features:
 
@@ -492,11 +499,13 @@ Conclusion:
 
 SpiderFoot is an essential tool for cybersecurity professionals 💻, OSINT investigators, and threat intelligence analysts. Its ability to automatically collect and correlate vast amounts of data helps identify vulnerabilities, track threat actors, and strengthen digital defenses 🛡️. Whether you’re a beginner or an expert, SpiderFoot simplifies reconnaissance and makes intelligence gathering efficient and effective 🚀.
 
-# 📊 Elasticvue: Elasticsearch Management Made Easy 📊
+## 📊 Elasticvue: Elasticsearch Management Made Easy 📊
 
 Overview:
 
-Elasticvue is a powerful web-based tool for managing and visualizing Elasticsearch clusters 🔍. It provides a clean and intuitive interface for querying, monitoring, and administering Elasticsearch data. Elasticvue is designed for developers, system administrators, and security professionals who work with Elasticsearch on a daily basis.</p>
+Elasticvue is a powerful web-based tool for managing and visualizing Elasticsearch clusters 🔍. It provides a clean and intuitive interface for querying, monitoring, and administering Elasticsearch data. Elasticvue is designed for developers, system administrators, and security professionals who work with Elasticsearch on a daily basis.
+
+![Snimak ekrana 2025-12-07 164334](https://github.com/user-attachments/assets/dc99b11d-a4b4-417b-94c6-a2f5a2ff82c0)
 
 Key Features:
 
