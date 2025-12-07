@@ -1,5 +1,4 @@
 # 🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
-Introduction
 
 Welcome to my T-Pot Honeypot project! 👋
 
@@ -23,7 +22,7 @@ Ubuntu is a user-friendly Linux operating system widely used for servers.
   <li><strong>x64</strong> → 64-bit architecture, supports modern applications and more memory</li>
 </ul>
 
-![Snimak ekrana 2025-12-06 105721](https://github.com/user-attachments/assets/f2fd83f3-d96f-4e99-a403-a145bf6ffefb)
+![ISO image](https://github.com/user-attachments/assets/f2fd83f3-d96f-4e99-a403-a145bf6ffefb)
 
 ## 3. Choose a Region
 
@@ -36,7 +35,7 @@ Some examples:
   <li><strong>🇦🇺 Sydney</strong></li>
 </ul>
 
-![Snimak ekrana 2025-12-06 140641](https://github.com/user-attachments/assets/b6ac6764-bd40-4eea-afd2-a950ca497acd)
+![Choose Region](https://github.com/user-attachments/assets/b6ac6764-bd40-4eea-afd2-a950ca497acd)
 
 ## 4. Select CPU, Memory, and Disk
 
@@ -49,16 +48,16 @@ Optionally, enable automatic backups (recommended but not mandatory).
 Set up authentication:
 Password for root user OR
 SSH key for secure login
-![Snimak ekrana 2025-12-06 140159](https://github.com/user-attachments/assets/6e658cd1-99c3-43be-9495-1d2136a84e80)
+![Password](https://github.com/user-attachments/assets/6e658cd1-99c3-43be-9495-1d2136a84e80)
 
 ## 6. Create Droplet
 
 Click Create Droplet and wait for the server to be provisioned.
 You will receive the IP address to access your T-Pot honeypot. 🚀
 
-In the Graphs section of the droplet created on DigitalOcean Cloud, you can monitor bandwidth, CPU usage, and disk I/O.
+In the Graphs section of the droplet created on Digital Ocean Cloud, you can monitor bandwidth, CPU usage, and disk I/O.
 
-![Snimak ekrana 2025-12-07 163110](https://github.com/user-attachments/assets/dadd742d-aa71-41ac-898e-e5503c2cf425)
+![Droplet graphs](https://github.com/user-attachments/assets/dadd742d-aa71-41ac-898e-e5503c2cf425)
 
 
 # 🚨 Deploying T-Pot Honeypot via PowerShell (SSH)
@@ -98,9 +97,9 @@ cd /home/username
 Moves into the home directory of the new user, where your cloned repository and installation files will be stored.
 
 ## 7. 📥 Clone Your Repository
-git clone repos
+git clone repository
 
-Clones the repository containing the T-Pot CE files or your fork of the project. Replace repos with the actual Git URL.
+Clones the repository containing the T-Pot CE files or your fork of the project. Replace repository with the actual Git URL.
 
 ## 8. 📂 Enter the T-Pot Directory
 cd tpotce/
@@ -113,11 +112,12 @@ Navigates into the cloned repository folder where the T-Pot installation script 
 Executes the official T-Pot installation script. The script will guide you through configuration options and set up multiple honeypot services, dashboards, and data pipelines.
 Make sure the script is executable (chmod +x install.sh) if needed.
 
-<strong>🔄 Changing the SSH Port During T-Pot Installation</strong>
+**🔄 Changing the SSH Port During T-Pot Installation**
+
 During the T-Pot installation process, the setup wizard automatically changes the default SSH port from 22 to a randomly assigned high port number.
 This is done for security reasons, because T-Pot exposes multiple honeypots on common ports, and keeping SSH on 22 would make the real system vulnerable or interfere with honeypot services.
 
-![Snimak ekrana 2025-12-06 112610](https://github.com/user-attachments/assets/111bd295-fa72-46ad-a01b-2229d116a186)
+![T-Pot types](https://github.com/user-attachments/assets/111bd295-fa72-46ad-a01b-2229d116a186)
 
 ## 🧰 T-Pot Deployment Profiles 
 
@@ -169,7 +169,7 @@ https://publicIPaddress:sshportnumber
 T-Pot’s web UI (Cockpit + dashboards) also listens on the same high port that SSH was moved to (for example, https://yourIP:64297).
 This port is chosen dynamically by the installer to avoid conflicts with the honeypots, many of which use standard ports (22, 80, 443, etc.) to mimic real services.
 
-The high port—e.g., 64297—acts as a secure management port for both:
+The high port e.g., 64297 acts as a secure management port for both:
 
 🔐 SSH administration
 
@@ -183,11 +183,11 @@ Useful after configuration updates or troubleshooting.
 
 # T-Pot Honeypot
 
-![Snimak ekrana 2025-12-06 123918](https://github.com/user-attachments/assets/31f8f62c-7835-4339-9c66-44bcef035a0b)
+![T-Pot Honeypot](https://github.com/user-attachments/assets/31f8f62c-7835-4339-9c66-44bcef035a0b)
 
 ## 📊 T-Pot Honeypot – 24-Hour Attack Report
 
-![Snimak ekrana 2025-12-07 130011](https://github.com/user-attachments/assets/6807c393-3275-4667-8091-737cd811c7db)
+![Atack Map](https://github.com/user-attachments/assets/6807c393-3275-4667-8091-737cd811c7db)
 
 Time window: Last 24 hours
 Total recorded events: ≈ 51,463 attacks
@@ -282,7 +282,7 @@ Most of these are likely automated bots or compromised servers performing broad-
 This report summarizes all attacks recorded by the T-Pot honeypot environment during the last 24 hours, visualized through Kibana dashboards.
 The goal is to provide a clear, readable, and insightful overview of attacker behavior, targeted services, ports, and credential attempts across all honeypot sensors.
 
-![Snimak ekrana 2025-12-07 132216](https://github.com/user-attachments/assets/7945021d-edd1-44f0-b183-5a946fbc228e)
+![Kibana](https://github.com/user-attachments/assets/7945021d-edd1-44f0-b183-5a946fbc228e)
 
 
 ### 📊 1. Total Attacks Overview
@@ -369,9 +369,10 @@ Attackers heavily targeted services running on:
   <li>3000 – Generic application ports / probing</li>
 </ul>
 
-![Snimak ekrana 2025-12-07 132240](https://github.com/user-attachments/assets/5f9e5c79-1225-4310-a890-3d38cac68951)
-
 ### 🔐 4. Credential Attacks (Tagcloud Analysis)
+
+![User/Password atacks](https://github.com/user-attachments/assets/5f9e5c79-1225-4310-a890-3d38cac68951)
+
 👤 Username Tagcloud Highlights
 
 Most attempted usernames:
@@ -388,7 +389,7 @@ Most attempted usernames:
 
 Attackers overwhelmingly target default system accounts and common admin names.
 
-### 5.🔑 Password Tagcloud Highlights
+🔑 Password Tagcloud Highlights
 
 Most attempted passwords:
 
@@ -406,7 +407,7 @@ Most attempted passwords:
 
 🔎 This clearly indicates automated brute-force tools using giant default password dictionaries.
 
-### ⚙️ 6. Security Observations
+### ⚙️ 5. Security Observations
 ✔ High rate of automated botnet traffic
 
 SSH (Cowrie), SMB, and SIP ports show continuous brute-force waves.
@@ -425,10 +426,9 @@ Ports 8728, 5060, and ConPot hits show attackers probing routers, SIP servers, a
 
 ## 🔹 CyberChef: The Cyber Swiss Army Knife 🔹
 
-Overview:
 CyberChef, often called the “Cyber Swiss Army Knife” 🛠️, is a web-based tool developed by GCHQ for performing a wide variety of data analysis, manipulation, and encryption tasks. It’s designed for both beginners and professionals in cybersecurity, digital forensics, and data analysis. The tool allows users to process data through an intuitive drag-and-drop interface, using “recipes” 🍳 that chain together different operations.
 
-![Snimak ekrana 2025-12-07 134453](https://github.com/user-attachments/assets/74c5bf01-f6c4-427c-b4c3-1a555fdc9180)
+![Cybershef](https://github.com/user-attachments/assets/74c5bf01-f6c4-427c-b4c3-1a555fdc9180)
 
 Key Features:
 <ul>
@@ -455,17 +455,13 @@ Why It Stands Out:
   <li>🌐 <strong>Open Source:</strong> Freely available and continuously improved by the community.</li>
 </ul>
 
-Conclusion:
 CyberChef is a versatile tool for anyone working in cybersecurity 💻. Its ability to quickly manipulate, decode, and analyze data makes it an essential part of threat hunting, digital forensics, and malware analysis. With CyberChef, complex tasks become simple, making it a “must-have” tool for security professionals and enthusiasts alike 🚀.
 
 ## 🕷️ SpiderFoot: The Automated OSINT Tool 🕷️
 
-Overview:
-
 SpiderFoot is an open-source intelligence (OSINT) automation tool that helps security professionals gather information about IPs, domains, email addresses, names, and more 🌐. It automates the collection and correlation of data from hundreds of sources, making reconnaissance faster, easier, and more accurate. SpiderFoot is designed for both beginners and experts in cybersecurity, threat intelligence, and digital forensics.
 
-![Snimak ekrana 2025-12-07 164128](https://github.com/user-attachments/assets/1b1ff939-87fc-4d44-a2c4-f20384c49716)
-
+![SpiderFoot](https://github.com/user-attachments/assets/1b1ff939-87fc-4d44-a2c4-f20384c49716)
 
 Key Features:
 
@@ -495,17 +491,13 @@ Why It Stands Out:
   <li>🌐 <strong>Open Source:</strong> Continuously improved by the community and fully customizable.</li>
 </ul>
 
-Conclusion:
-
 SpiderFoot is an essential tool for cybersecurity professionals 💻, OSINT investigators, and threat intelligence analysts. Its ability to automatically collect and correlate vast amounts of data helps identify vulnerabilities, track threat actors, and strengthen digital defenses 🛡️. Whether you’re a beginner or an expert, SpiderFoot simplifies reconnaissance and makes intelligence gathering efficient and effective 🚀.
 
 ## 📊 Elasticvue: Elasticsearch Management Made Easy 📊
 
-Overview:
-
 Elasticvue is a powerful web-based tool for managing and visualizing Elasticsearch clusters 🔍. It provides a clean and intuitive interface for querying, monitoring, and administering Elasticsearch data. Elasticvue is designed for developers, system administrators, and security professionals who work with Elasticsearch on a daily basis.
 
-![Snimak ekrana 2025-12-07 164334](https://github.com/user-attachments/assets/dc99b11d-a4b4-417b-94c6-a2f5a2ff82c0)
+![Elasticvue](https://github.com/user-attachments/assets/dc99b11d-a4b4-417b-94c6-a2f5a2ff82c0)
 
 Key Features:
 
@@ -534,8 +526,6 @@ Why It Stands Out:
   <li>🧰 <strong>All-in-One Tool:</strong> Combines querying, monitoring, and cluster management in a single platform.</li>
   <li>🌐 <strong>Open Source:</strong> Freely available, actively maintained, and community-driven.</li>
 </ul>
-
-Conclusion: 
 
 Elasticvue is an essential tool for anyone working with Elasticsearch 💻. Its clean interface, powerful querying capabilities, and monitoring tools make it ideal for developers, sysadmins, and security analysts alike 🛡️. Whether analyzing logs, managing clusters, or hunting for threats, Elasticvue simplifies the process and enhances productivity 🚀.
 
