@@ -1,10 +1,10 @@
 # 🐝 T-Pot Honeypot Setup on Digital Ocean ☁️
 
-Welcome to my T-Pot Honeypot project! 👋
+Welcome to my T-Pot Honeypot project! 
 
-T-Pot is an all-in-one honeypot platform that combines multiple honeypot technologies to capture and analyze attacks in real-time. It’s perfect for research and security monitoring to understand attacker behaviors and techniques. 🔒
+T-Pot is an all-in-one honeypot platform that combines multiple honeypot technologies to capture and analyze attacks in real-time. It’s perfect for research and security monitoring to understand attacker behaviors and techniques. 
 
-I decided to deploy T-Pot on <a href="https://www.digitalocean.com/">Digital Ocean</a>, a cloud computing platform that provides simple and scalable virtual machines (Droplets) to host applications. Digital Ocean makes it easy to set up a server quickly without worrying about hardware management. ⚡
+I decided to deploy T-Pot on <a href="https://www.digitalocean.com/">Digital Ocean</a>, a cloud computing platform that provides simple and scalable virtual machines (Droplets) to host applications. Digital Ocean makes it easy to set up a server quickly without worrying about hardware management. 
 
 # 🛠 Creating a Droplet
 ## 1. Go to Create Droplet
@@ -24,7 +24,7 @@ Ubuntu is a user-friendly Linux operating system widely used for servers.
 
 ## 3. Choose a Region
 
-Pick a region closest to you for better latency. 🌍
+Pick a region closest to you for better latency. 
 Some examples:
 * 🇺🇸 **New York**
 * 🇩🇪 **Frankfurt**
@@ -49,7 +49,7 @@ Set up authentication:
 ## 6. Create Droplet
 
 Click **Create Droplet** and wait for the server to be provisioned.
-You will receive the IP address to access your T-Pot honeypot. 🚀
+You will receive the IP address to access your T-Pot honeypot. 
 
 In the **Graphs** section of the droplet created on Digital Ocean Cloud, you can monitor bandwidth, CPU usage, and disk I/O.
 
@@ -333,7 +333,7 @@ Ports 8728, 5060, and ConPot hits show attackers probing routers, SIP servers, a
 
 ## 🔹 CyberChef: The Cyber Swiss Army Knife 🔹
 
-CyberChef, often called the “Cyber Swiss Army Knife” 🛠️, is a web-based tool developed by GCHQ for performing a wide variety of data analysis, manipulation, and encryption tasks. It’s designed for both beginners and professionals in cybersecurity, digital forensics, and data analysis. The tool allows users to process data through an intuitive drag-and-drop interface, using “recipes” 🍳 that chain together different operations.
+CyberChef, often called the “Cyber Swiss Army Knife” 🛠️, is a web-based tool developed by GCHQ for performing a wide variety of data analysis, manipulation, and encryption tasks. It’s designed for both beginners and professionals in cybersecurity, digital forensics, and data analysis. The tool allows users to process data through an intuitive drag-and-drop interface, using “recipes” that chain together different operations.
 
 ![CyberChef](https://github.com/user-attachments/assets/74c5bf01-f6c4-427c-b4c3-1a555fdc9180)
 
@@ -345,11 +345,11 @@ Key Features:
 * ⚡ **Analysis & Transformation:** Perform pattern matching, regex searches, or byte-level operations.
 
 Why It’s Useful in Cybersecurity:
-1. 🚨 **Incident Response:** Quickly decode and analyze suspicious files, emails, or network traffic.
-2. 🦠 **Malware Analysis:** Inspect payloads, decrypt strings, or reverse engineer obfuscated code.
-3. 🕵️‍♂️ **Forensics:** Extract hidden information from files or logs to understand an attack or breach.
-4. ⚙️ **Rapid Prototyping:** Create custom “recipes” to automate repetitive analysis tasks.
-5. 📚 **Education & Training:** Visual interface helps beginners learn cryptography and encoding concepts easily.
+1. **Incident Response:** Quickly decode and analyze suspicious files, emails, or network traffic.
+2. **Malware Analysis:** Inspect payloads, decrypt strings, or reverse engineer obfuscated code.
+3. **Forensics:** Extract hidden information from files or logs to understand an attack or breach.
+4. **Rapid Prototyping:** Create custom “recipes” to automate repetitive analysis tasks.
+5. **Education & Training:** Visual interface helps beginners learn cryptography and encoding concepts easily.
 
 Why It Stands Out:
 * ✨ **Intuitive Interface:** No need to write scripts; drag and drop operations in a logical sequence.
@@ -374,11 +374,11 @@ Key Features:
 
 Why It’s Useful in Cybersecurity:
 
-1. 🕵️‍♂️ **Recon & Footprinting:** Map out an organization’s digital footprint efficiently.
-2. 🚨 **Threat Hunting:** Detect potential attack surfaces or compromised assets.
-3. 🦠 **Security Assessment:** Identify exposed data or weak points before attackers do.
-4. 📚 **Research & Education:** Learn OSINT techniques and gather real-world data safely.
-5. ⚙️ **Automation:** Save time with automated scanning and reporting, reducing human error.
+1. **Recon & Footprinting:** Map out an organization’s digital footprint efficiently.
+2. **Threat Hunting:** Detect potential attack surfaces or compromised assets.
+3. **Security Assessment:** Identify exposed data or weak points before attackers do.
+4. **Research & Education:** Learn OSINT techniques and gather real-world data safely.
+5. **Automation:** Save time with automated scanning and reporting, reducing human error.
 
 Why It Stands Out:
 
@@ -404,11 +404,11 @@ Key Features:
 
 Why It’s Useful in Cybersecurity:
 
-1. 🕵️‍♂️ **Log Analysis:** Quickly analyze logs and events for suspicious activity or incidents.
-2. 🚨 **Monitoring:** Keep track of Elasticsearch cluster health and performance to avoid failures.
-3. 🦠 **Threat Hunting:** Query and correlate security logs to identify potential attacks.
-4. ⚙️ **Automation & Admin:** Manage indices, mappings, and settings without using command-line tools.
-5. 📚 **Learning & Debugging:** Explore Elasticsearch queries and understand data structures easily.
+1. **Log Analysis:** Quickly analyze logs and events for suspicious activity or incidents.
+2. **Monitoring:** Keep track of Elasticsearch cluster health and performance to avoid failures.
+3. **Threat Hunting:** Query and correlate security logs to identify potential attacks.
+4. **Automation & Admin:** Manage indices, mappings, and settings without using command-line tools.
+5. **Learning & Debugging:** Explore Elasticsearch queries and understand data structures easily.
 
 Why It Stands Out:
 
